@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuickBite - Contact</title>
+  <!-- Bootstrap 5.3.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+
+  <style>
+    /* Navbar styling */
+    .navbar {
+      background-color: rgb(21, 21, 21);
+      border-radius: 5px;
+      padding: 10px 15px;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    .navbar .nav-link {
+      color: white !important;
+      transition: 0.3s;
+    }
+
+    .navbar .nav-link:hover {
+      background-color: orange;
+      border-radius: 5px;
+    }
+
+    /* Hero Section */
+    .hero-section {
+      background-image: url('./The Dark Elegance_ Crafting a Noir-Inspired Bar for Mysterious Encounters.jpeg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 500px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      margin-top: 80px; /* Space for fixed navbar */
+    }
+
+    @media(max-width: 768px){
+      .hero-section {
+        height: 300px;
+        padding: 20px;
+      }
+    }
+
+    /* Footer icons hover */
+    footer a:hover {
+      color: #ffc107 !important;
+    }
+  </style>
+</head>
+<body class="bg-light">
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <!-- Logo -->
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+        <img src="./qb-logo" alt="logo" class="rounded-pill" width="50" height="50">
+        <h2 class="mb-0">
+          <span class="text-warning">Quick</span><span class="text-white">Bite</span>
+        </h2>
+      </a>
+
+      <!-- Toggler -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navbar Links -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 fs-5">
+          <li class="nav-item"><a class="nav-link active" href="quickbitehome.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="quickbiteabout.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="quickbitemenu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="quickbitereview.html">Review</a></li>
+          <li class="nav-item"><a class="nav-link" href="quickbiteorder.html">Order</a></li>
+          <li class="nav-item"><a class="nav-link" href="quickbitefaq.html">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link" href="quickbitecontact.html">Contact</a></li>
+        </ul>
+
+        <!-- Search + Cart + Login -->
+        <form class="d-flex me-2 mb-2 mb-lg-0" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search dishes...">
+          <button class="btn btn-outline-warning" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+
+        <div class="d-flex align-items-center">
+          <div class="position-relative me-2">
+            <button class="btn btn-outline-light position-relative" data-bs-toggle="offcanvas" data-bs-target="#cartCanvas">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning">3</span>
+            </button>
+          </div>
+          <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#loginModal">
+            <i class="fa-regular fa-user"></i> Login
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div>
+      <h1 class="display-3 fw-bold">CONTACT</h1>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="container my-5" id="contact">
+    <div class="row g-4">
+      <!-- Form -->
+      <div class="col-md-6">
+        <div class="card shadow-sm p-4">
+          <h2 class="mb-4">Get In Touch</h2>
+          <form>
+            <input type="text" class="form-control mb-3" placeholder="Your Name" required>
+            <input type="text" class="form-control mb-3" placeholder="Phone Number" required>
+            <input type="email" class="form-control mb-3" placeholder="Email" required>
+            <textarea class="form-control mb-3" rows="5" placeholder="Message" required></textarea>
+            <button type="submit" class="btn btn-success" style="width:150px;">Send Now</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-md-6">
+        <div class="card shadow-sm p-4">
+          <h2 class="mb-4">Talk To Us</h2>
+          <p><strong>Email:</strong><br>quickbite@gmail.com</p>
+          <p><strong>Phone:</strong><br>202-555-0188</p>
+          <p><strong>Address:</strong><br>2727 Ocean Road, INDIA, 90264</p>
+          <div class="mt-4">
+            <p><b>Follow Us:</b></p>
+            <a href="#" class="me-2 text-success fs-4"><i class="fab fa-facebook-square"></i></a>
+            <a href="#" class="me-2 text-success fs-4"><i class="fab fa-twitter-square"></i></a>
+            <a href="#" class="me-2 text-success fs-4"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="me-2 text-success fs-4"><i class="fab fa-whatsapp-square"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Login Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Login</h5>
+          <button class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <label class="form-label">Email</label>
+          <input type="email" class="form-control mb-3" placeholder="you@example.com">
+          <label class="form-label">Password</label>
+          <input type="password" class="form-control" placeholder="••••••••">
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+          <button class="btn btn-primary">Sign In</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Offcanvas Cart -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="cartCanvas">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title">Your Cart</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div class="d-flex align-items-center justify-content-between mb-2">
+        <div>Items: <span class="badge text-bg-secondary">3</span></div>
+        <button class="btn btn-sm btn-outline-danger">Clear</button>
+      </div>
+      <ul class="list-group mb-3">
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          Mandi <span class="badge text-bg-primary rounded-pill">₹300</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          Burger <span class="badge text-bg-primary rounded-pill">₹220</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          Prawns Biriyani <span class="badge text-bg-primary rounded-pill">₹200</span>
+        </li>
+      </ul>
+      <button class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#previewModal">Checkout</button>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer class="bg-dark text-light pt-5 pb-4">
+    <div class="container">
+      <div class="row text-center text-md-start">
+
+        <!-- Locations -->
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+          <h5 class="text-uppercase fw-bold mb-4">Locations</h5>
+          <p><a href="#" class="text-light text-decoration-none">India</a></p>
+          <p><a href="#" class="text-light text-decoration-none">Japan</a></p>
+          <p><a href="#" class="text-light text-decoration-none">Russia</a></p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+          <h5 class="text-uppercase fw-bold mb-4">Quick Links</h5>
+          <p><a href="#" class="text-light text-decoration-none">Home</a></p>
+          <p><a href="#" class="text-light text-decoration-none">About</a></p>
+          <p><a href="#" class="text-light text-decoration-none">Menu</a></p>
+          <p><a href="#" class="text-light text-decoration-none">Review</a></p>
+          <p><a href="#" class="text-light text-decoration-none">Order</a></p>
+          <p><a href="#" class="text-light text-decoration-none">FAQ</a></p>
+          <p><a href="#" class="text-light text-decoration-none">Contact</a></p>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+          <h5 class="text-uppercase fw-bold mb-4">Contact Info</h5>
+          <p>+123-456-7890</p>
+          <p>+111-222-3333</p>
+          <p>quickbite@gmail.com</p>
+          <p>Ernakulam, India - 400104</p>
+        </div>
+
+        <!-- Follow Us -->
+        <div class="col-md-4 col-lg-4 col-xl-3 mx-auto mt-3">
+          <h5 class="text-uppercase fw-bold mb-4">Follow Us</h5>
+          <div class="d-flex gap-3 justify-content-center justify-content-md-start">
+            <a href="#" class="text-light fs-4"><i class="fab fa-facebook-square"></i></a>
+            <a href="#" class="text-light fs-4"><i class="fab fa-twitter-square"></i></a>
+            <a href="#" class="text-light fs-4"><i class="fab fa-instagram-square"></i></a>
+            <a href="#" class="text-light fs-4"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+
+      </div>
+
+      <hr class="my-3 bg-light">
+
+      <!-- Copyright -->
+      <div class="row">
+        <div class="col-12 text-center">
+          <p class="mb-0">Copyright © 2025 by
+            <a href="#" class="text-success fw-bold text-decoration-none">QuickBite</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

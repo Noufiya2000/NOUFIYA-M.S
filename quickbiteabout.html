@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESTAURANT</title>
+     <!-- Bootstrap 5.3.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  </script>
+  <!-- Font Awesome (icons) -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  
+
+<style>
+
+  .navbar {
+    margin-bottom: 5px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 5px;
+    padding: 10px 15px;
+    transition: 0.3s ease;
+    color: #fff;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+  }
+.navbar .nav-link:hover{
+  background-color: orange;
+  
+  border-radius: 5px;
+}
+
+ .about-section {
+      background: url(./The\ Dark\ Elegance_\ Crafting\ a\ Noir-Inspired\ Bar\ for\ Mysterious\ Encounters.jpeg) center/cover no-repeat;
+      height: 600px;
+    }
+
+
+    .feature-card {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+    }
+    .feature-card i {
+      font-size: 40px;
+      color: rgb(242, 116, 7);
+      margin-bottom: 15px;
+    }
+    .feature-card h5 {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .feature-card:hover {
+      background: #f57c00;
+      color: #fff;
+      transform: translateY(-8px);
+    }
+    .feature-card:hover i {
+      color: #fff;
+    }
+    .feature-card:hover h5,
+    .feature-card:hover p {
+      color: #fff;
+    }
+
+    /* Feature & Chef Cards */
+    .click-hover {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.click-hover:active {
+  transform: translateY(-9px);
+  background-color: #f0a75d;
+  box-shadow: 0 1rem 2rem rgba(0,0,0,0.3);
+}
+
+
+
+</style>
+</head>
+
+<body>
+    <body class="bg-light">
+       <section class="about-section d-flex justify-content-center align-items-center text-center text-white">
+    <div class="p-5">
+      <h2 class="fw-bold mb-3 display-4">ABOUT </h2>
+      <br><br>
+    </div>
+  </section>
+
+  <!-- NAVBAR  -->
+  <nav class="navbar navbar-expand-lg navbar-dark  fixed-top">
+    <div class="container">
+      <!-- Logo -->
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+        <img src="./qb-logo" alt="logo" class="rounded-pill" width="80px" height="80px">
+        <h2 class="brand-text ">
+
+        <span class="text-warning" >Quick</span><span class="text-white">Bite</span>
+            </h2>
+      </a>
+
+      <!-- Toggler -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Collapsible content -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <!-- Centered Nav Links -->
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 fs-5">
+          <li class="nav-item"><a class="nav-link active text-white" href="quickbitehome.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="quickbiteabout.html">About</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="quickbitemenu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="quickbitereview.html">Review</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="quickbiteorder.html">Order</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="quickbitefaq.html">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="qcontact.html">Contact</a></li>
+        </ul>
+
+        <!-- Search + Cart  -->
+        <form class="d-flex me-3" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search dishes...">
+          <button class="btn btn-outline-warning" type="submit" ><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+
+        <!-- Cart with notification badge -->
+        <div class="position-relative me-3">
+          <button class="btn btn-outline-light position-relative" data-bs-toggle="offcanvas" data-bs-target="#cartCanvas">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning">3</span>
+          </button>
+        </div>
+
+        <!-- Login trigger  -->
+        <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#loginModal">
+          <i class="fa-regular fa-user"></i> Login
+        </button>
+      </div>
+    </div>
+  </nav>
+  <!--(Login, Preview) -->
+  <div class="modal fade" id="loginModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Login</h5>
+          <button class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <label class="form-label">Email</label>
+          <input type="email" class="form-control mb-3" placeholder="you@example.com">
+          <label class="form-label">Password</label>
+          <input type="password" class="form-control" placeholder="••••••••">
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+          <button class="btn btn-primary">Sign In</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <section id="home" class="py-5  text-dark">
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <!-- Left Side: Text -->
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <small class="text-uppercase text-danger fs-2">Our Story</small>
+        <h2 class="display-6 fw-bold my-3">Every Flavor <br> Tells a Story</h2>
+        <p class="text-muted fs-4">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s,
+          when an unknown printer scrambled a galley of type and created a type specimen book.
+          It has survived not only five centuries, but also the leap into electronic typesetting.
+        </p>
+        <p class="fw-bold mt-4">Book Through Call</p>
+        <p class="fs-5 text-success">+80 (400) 123 4567</p>
+        <a href="#menu" class="btn btn-outline-warning px-4">Read More</a>
+      </div>
+
+      <!-- Right Side: Images -->
+      <div class="col-lg-6 position-relative">
+        <!-- Main Restaurant Image -->
+        <img src="./qbhome-1.jpg"
+     class="img-fluid w-55 rounded shadow">
+     </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- About Content -->
+<section class="py-15 px-15 ">
+  <div class="container">
+    <div class="row g-4">
+       <h2 class="text-center fw-bold text-dark mb-5 fs-1"><br> <br>WHY CHOOSE US</h2>
+
+      <!-- Card 1 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="feature-card">
+          <i class="fa-solid fa-user-tie"></i>
+          <h5>Master Chefs</h5>
+          <p><br>Our team of highly skilled and passsionate chefs brings years of experience to the table.</p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="feature-card">
+          <i class="fa-solid fa-utensils"></i>
+          <h5>Quality Food</h5>
+          <p><br>We believe in serving only the best.Every meal ie prepared using fresh,locally sourced ingredients.</p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="feature-card">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <h5>Online Order</h5>
+          <p>Enjoy the convinience of ordering your favorite dishes online with just a few clicks.Fast, easy, and hassle-free!</p>
+        </div>
+      </div>
+
+      <!-- Card 4-->
+      <div class="col-md-3 col-sm-6">
+        <div class="feature-card">
+          <i class="fa-solid fa-headset"></i>
+          <h5>24/7 Service</h5>
+          <p>Whether it's breakfast,lunch,dinner or a midnight craving - we're always here to serve you,any time very fastly. </p>
+        </div>
+      </div>
+
+      <!-- Card 5-->
+      <div class="col-md-3 col-sm-6">
+        <div class="feature-card text-center p-4 shadow rounded">
+          <i class="fa-solid fa-face-smile  mb-3"></i>
+          <h5 class="fw-bold">Customer Satisfaction</h5>
+          <p>We prioritize your happiness and strive to provide a top-notch dining experience.</p>
+        </div>
+      </div>
+
+      <!-- Card 6-->
+      <div class="col-md-3 col-sm-6">
+        <div class="feature-card text-center p-4 shadow rounded">
+          <i class="fa-solid fa-leaf mb-3"></i>
+          <h5 class="fw-bold">Fresh Ingredients</h5>
+          <p>Our ingredients are sourced daily to ensure freshness and exceptional flavor in every bite.</p>
+        </div>
+      </div>
+
+    <div class="col-md-3 col-sm-6">
+    <div class="feature-card text-center p-4 shadow rounded">
+      <i class="fa-solid fa-star mb-3"></i>
+      <h5 class="fw-bold">Top Quality</h5>
+      <p>We ensure premium quality products that meet high standards and delight every customer.</p>
+    </div>
+  </div>
+
+  <!-- Card 7 -->
+  <div class="col-md-3 col-sm-6">
+    <div class="feature-card text-center p-4 shadow rounded">
+      <i class="fa-solid fa-heart mb-3"></i>
+      <h5 class="fw-bold">Customer Care</h5>
+      <p>Our friendly support team is always ready to assist you with any questions or concerns.</p>
+    </div>
+  </div>
+
+ 
+
+    </div>
+  </div>
+</section>
+<br><br><br>
+<!-- About Section -->
+<section id="about" class="py-5 py-10 bg-light">
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <!-- Image Side -->
+      <div class="col-md-6 mb-4 mb-md-0">
+        <img src="./restaurant interior.jpg" 
+             alt="Restaurant Interior" 
+             class="img-fluid rounded shadow rounded float-end">
+      </div>
+
+      <!-- Text Side -->
+      <div class="col-md-6">
+        <h2 class="fw-bold mb-4 fs-1 text-warning">About Us</h2>
+        <p class="lead">
+          Welcome to QuickBite, your go-to destination for delicious meals delivered fast and fresh! We started with a simple mission – to bring people closer to the food they love without the long wait. At QuickBite, we believe that great food has the power to create joy, connect people, and turn any moment into a special one.
+
+        <br>From hearty breakfasts to fulfilling lunches and delightful dinners, our menu is carefully crafted to suit every taste and craving. With the expertise of our master chefs and a commitment to using only fresh, high-quality ingredients, we ensure that every bite you take is packed with flavor.
+Whether you dine in, take out, or order online, we promise convenience, quality, and service that’s available 24/7. At QuickBite, it’s not just about food – it’s about creating a memorable experience for you and your loved ones.
+ QuickBite – Bringing delicious meals to your doorstep, anytime, anywhere.
+        </p>
+        <a href="#menu" class="btn btn-warning btn-lg mt-3">Explore Our Menu</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+    <!-- Pagination -->
+    <nav aria-label="Gallery navigation" class="mt-4">
+
+      <ul class="pagination justify-content-center" >
+        <li class="page-item disabled"><a class="page-link" href="#menu">Previous</a></li>
+        <li class="page-item active"><a class="page-link" href="gallery1.html">1</a></li>
+        <li class="page-item"><a class="page-link" href="gallery2.html">2</a></li>
+        <li class="page-item"><a class="page-link" href="gallery3.html">3</a></li>
+        <li class="page-item"><a class="page-link" href="gallery2.html">Next</a></li>
+      </ul>
+    </nav>
+
+  </div>
+</section>
+
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5 fw-bold">Our Master Chefs</h2>
+    <div class="row g-4 justify-content-center">
+
+      <!-- Loop through all cards -->
+      <div class="col-md-3 col-sm-6">
+        <div class="card shadow-sm click-hover">
+          <img src="./chef1.jpg" class="img-fluid" style="height:250px; width:100%; object-fit:cover;" alt="Chef Alex Brown">
+          <div class="card-body text-center">
+            <h5 class="card-title mb-1">Chef Alex Brown</h5>
+            <p class="text-muted small">Head Chef</p>
+            <div class="d-flex justify-content-center mt-3">
+              <a href="#" class="btn btn-warning btn-sm mx-1"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="btn btn-warning btn-sm mx-1"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="btn btn-warning btn-sm mx-1"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <div class="card shadow-sm click-hover">
+          <img src="./chef3.jpg" class="img-fluid" style="height:250px; width:100%; object-fit:cover;" alt="Chef Emma White">
+          <div class="card-body text-center">
+            <h5 class="card-title mb-1">Chef Emma White</h5>
+            <p class="text-muted small">Sous Chef</p>
+            <div class="d-flex justify-content-center mt-3">
+              <a href="#" class="btn btn-warning btn-sm mx-1"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="btn btn-warning btn-sm mx-1"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="btn btn-warning btn-sm mx-1"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <div class="card shadow-sm click-hover">
+          <img src="./chef5.jpg" class="img-fluid" style="height:250px; width:100%; object-fit:cover;" alt="Chef Alexander">
+          <div class="card-body text-center">
+            <h5 class="card-title mb-1">Chef Alexander</h5>
+            <p class="text-muted small">Sous Chef</p>
+            <div class="d-flex justify-content-center mt-3">
+              <a href="#" class="btn btn-warning btn-sm mx-1"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="btn btn-warning btn-sm mx-1"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="btn btn-warning btn-sm mx-1"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <div class="card shadow-sm click-hover">
+          <img src="./chef6.jpeg" class="img-fluid" style="height:250px; width:100%; object-fit:cover;" alt="Chef John Doe">
+          <div class="card-body text-center">
+            <h5 class="card-title mb-1">Chef John Doe</h5>
+            <p class="text-muted small">Grill Expert</p>
+            <div class="d-flex justify-content-center mt-3">
+              <a href="#" class="btn btn-warning btn-sm mx-1"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="btn btn-warning btn-sm mx-1"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="btn btn-warning btn-sm mx-1"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <div class="card shadow-sm click-hover">
+          <img src="./chef8.jpg" class="img-fluid" style="height:250px; width:100%; object-fit:cover;" alt="Chef Mary Smith">
+          <div class="card-body text-center">
+            <h5 class="card-title mb-1">Chef Mary Smith</h5>
+            <p class="text-muted small">Pizza Specialist</p>
+            <div class="d-flex justify-content-center mt-3">
+              <a href="#" class="btn btn-warning btn-sm mx-1"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="btn btn-warning btn-sm mx-1"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="btn btn-warning btn-sm mx-1"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <div class="card shadow-sm click-hover">
+          <img src="./c11.jpg" class="img-fluid" style="height:250px; width:100%; object-fit:cover;" alt="Chef David John">
+          <div class="card-body text-center">
+            <h5 class="card-title mb-1">Chef David John</h5>
+            <p class="text-muted small">Sous Chef</p>
+            <div class="d-flex justify-content-center mt-3">
+              <a href="#" class="btn btn-warning btn-sm mx-1"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="btn btn-warning btn-sm mx-1"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="btn btn-warning btn-sm mx-1"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <div class="card shadow-sm click-hover">
+          <img src="./chef6.jpg" class="img-fluid" style="height:250px; width:100%; object-fit:cover;" alt="Chef John">
+          <div class="card-body text-center">
+            <h5 class="card-title mb-1">Chef John</h5>
+            <p class="text-muted small">Grill Expert</p>
+            <div class="d-flex justify-content-center mt-3">
+              <a href="#" class="btn btn-warning btn-sm mx-1"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="btn btn-warning btn-sm mx-1"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="btn btn-warning btn-sm mx-1"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <div class="card shadow-sm click-hover">
+          <img src="./c10.jpg" class="img-fluid" style="height:250px; width:100%; object-fit:cover;" alt="Chef Cyriac">
+          <div class="card-body text-center">
+            <h5 class="card-title mb-1">Chef Cyriac</h5>
+            <p class="text-muted small">Pizza Specialist</p>
+            <div class="d-flex justify-content-center mt-3">
+              <a href="#" class="btn btn-warning btn-sm mx-1"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="btn btn-warning btn-sm mx-1"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="btn btn-warning btn-sm mx-1"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== OFFCANVAS (Cart / Quick Menu) ===== -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="cartCanvas">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title">Your Cart</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div class="d-flex align-items-center justify-content-between mb-2">
+        <div>Items: <span class="badge text-bg-secondary">3</span></div>
+        <button class="btn btn-sm btn-outline-danger">Clear</button>
+      </div>
+      <ul class="list-group mb-3">
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          Mandi <span class="badge text-bg-primary rounded-pill">300</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          Burger <span class="badge text-bg-primary rounded-pill">₹220</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          Prawns Biriyani <span class="badge text-bg-primary rounded-pill">₹200</span>
+        </li>
+      </ul>
+      <button class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#previewModal">Checkout</button>
+      </div>
+      </div>
+
+      
+ 
+      
+
+
+            <!-- Footer Section -->
+<footer class="bg-dark text-light pt-5 pb-4">
+  <div class="container text-center text-md-start">
+    <div class="row">
+
+      <!-- Locations -->
+      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+        <h5 class="text-uppercase text-light fw-bold mb-4">LOCATION</h5>
+        <p><a href="#" class="text-light text-decoration-none">INDIA</a></p>
+        <p><a href="#" class="text-light text-decoration-none">JAPAN</a></p>
+        <p><a href="#" class="text-light text-decoration-none">RUSSIA</a></p>
+       
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+        <h5 class="text-uppercase fw-bold mb-4">Quick Links</h5>
+        <p><a href="#" class="text-light text-decoration-none">HOME</a></p>
+        <p><a href="#" class="text-light text-decoration-none">ABOUT</a></p>
+        <p><a href="#" class="text-light text-decoration-none">MENU</a></p>
+        <p><a href="#" class="text-light text-decoration-none">REVIEW</a></p>
+        <p><a href="#" class="text-light text-decoration-none">ORDER</a></p>
+        <p><a href="#" class="text-light text-decoration-none">FAQ</a></p>
+        <p><a href="#" class="text-light text-decoration-none">CONTACT</a></p>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+        <h5 class="text-uppercase fw-bold mb-4">Contact Info</h5>
+        <p> +123-456-7890</p>
+        <p> +111-222-3333</p>
+        <p> quickbite@gmail.com</p>
+        <p> Ernakulam, India - 400104</p>
+      </div>
+
+      <!-- Follow Us -->
+      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+        <h5 class="text-uppercase fw-bold mb-4">Follow Us</h5>
+        <p><a href="#" class="text-light text-decoration-none">Facebook</a></p>
+        <p><a href="#" class="text-light text-decoration-none">Twitter</a></p>
+        <p><a href="#" class="text-light text-decoration-none">Instagram</a></p>
+        <p><a href="#" class="text-light text-decoration-none">LinkedIn</a></p>
+      </div>
+
+    </div>
+
+    <hr class="my-3">
+
+    <!-- Copyright -->
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <p class="mb-0">Copyright ©️ 2025 By 
+          <a href="#" class="text-success fw-bold text-decoration-none">QuickBite</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
+    
+
+    </div>
+  </div>
+</section>
